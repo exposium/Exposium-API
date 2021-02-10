@@ -9,7 +9,7 @@ class TipoDeItem extends Model
 {
     use HasFactory;
 
-    protected $table = 'tipoDeItem';
+    protected $table = 'tipodeitem';
     public $timestamps = false;
     protected $primaryKey = "tipoItemID";
 }
