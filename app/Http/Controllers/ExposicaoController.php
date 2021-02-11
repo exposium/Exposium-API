@@ -30,7 +30,7 @@ class ExposicaoController extends Controller
         $exhibitions = Exposicao::where("estado", false)->get();
         foreach ($exhibitions as $exhibition) {
             $institution = Instituicao::where("instituicaoID", $exhibition->instituicaoID)->first();
-            array_merge($exhibition, ["nomeInstituicao" => $institution->nome]);
+            array_merge($exhibition->toArray(), ["nomeInstituicao" => $institution->nome]);
         }
         return $exhibitions;
     }

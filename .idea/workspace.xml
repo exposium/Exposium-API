@@ -19,7 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2e08182f-29b2-4dad-8542-cca5af431225" name="Default Changelist" comment="" />
+    <list default="true" id="2e08182f-29b2-4dad-8542-cca5af431225" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExposicaoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExposicaoController.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -181,7 +183,7 @@
       <workItem from="1612365022006" duration="630000" />
       <workItem from="1612538904968" duration="1959000" />
       <workItem from="1612625588258" duration="2043000" />
-      <workItem from="1613061800041" duration="660000" />
+      <workItem from="1613061800041" duration="986000" />
     </task>
     <servers />
   </component>
