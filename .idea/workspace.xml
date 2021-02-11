@@ -20,7 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2e08182f-29b2-4dad-8542-cca5af431225" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Models/TipoDeItem.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/TipoDeItem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ExposicaoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ExposicaoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +170,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1b85e68a-2086-4ec5-a655-3cafe4b9c7b2" name="Default Changelist" comment="" />
+      <changelist id="2e08182f-29b2-4dad-8542-cca5af431225" name="Default Changelist" comment="" />
       <created>1611575560614</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -183,6 +185,7 @@
       <workItem from="1612365022006" duration="630000" />
       <workItem from="1612538904968" duration="1959000" />
       <workItem from="1612625588258" duration="2043000" />
+      <workItem from="1613061800041" duration="354000" />
     </task>
     <servers />
   </component>
@@ -199,6 +202,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="491" y="204" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1611673886614">

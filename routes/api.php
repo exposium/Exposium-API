@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 /* Exposição */
 Route::get('/exposicao', [ExposicaoController::class, 'index'])->middleware('cors');
+Route::get('/exposicoesAtivas', [ExposicaoController::class, 'activeExhibitions'])->middleware('cors');
 Route::get('/exposicao/{id}', [ExposicaoController::class, 'show'])->middleware('cors');
 Route::get('/exposicao/instituicao/{id}', [ExposicaoController::class, 'getExhibitionsByInstitution'])->middleware('cors');
 Route::post('/exposicao', [ExposicaoController::class, 'store'])->middleware('cors', 'checkToken');

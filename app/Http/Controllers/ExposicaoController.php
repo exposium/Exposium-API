@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Exposicao;
+use App\Models\Instituicao;
 use App\Models\Item;
 use Illuminate\Http\Request;
 use function Symfony\Component\Translation\t;
@@ -17,6 +18,21 @@ class ExposicaoController extends Controller
     public function index()
     {
         return Exposicao::all();
+    }
+
+    /**
+     * // TODO
+     *
+     * @return Exposicao[]|\Illuminate\Database\Eloquent\Collection
+     */
+    public function activeExhibitions()
+    {
+        $exhibitions = Exposicao::where("estado", 1)->get();
+        foreach ($exhibitions as $exhibition) {
+            $institutionName = Instituicao::find($exhibition->instituicaoID)->nome;
+            array_merge($exhibition, ["nomeInstituicao" => $institutionName]);
+        }
+        return $exhibitions;
     }
 
     /**
