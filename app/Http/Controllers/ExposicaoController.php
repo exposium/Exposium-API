@@ -27,7 +27,7 @@ class ExposicaoController extends Controller
      */
     public function activeExhibitions()
     {
-        $exhibitions = Exposicao::where("estado", 1)->get();
+        $exhibitions = Exposicao::where("estado", true)->get();
         foreach ($exhibitions as $exhibition) {
             $institutionName = Instituicao::find($exhibition->instituicaoID)->nome;
             array_merge($exhibition, ["nomeInstituicao" => $institutionName]);
