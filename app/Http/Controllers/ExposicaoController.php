@@ -27,11 +27,11 @@ class ExposicaoController extends Controller
      */
     public function activeExhibitions()
     {
-        $exhibitions = Exposicao::where("estado", true)->get();
-        /* foreach ($exhibitions as $exhibition) {
+        $exhibitions = Exposicao::where("estado", false)->get();
+        foreach ($exhibitions as $exhibition) {
             $institution = Instituicao::where("instituicaoID", $exhibition->instituicaoID)->first();
             array_merge($exhibition, ["nomeInstituicao" => $institution->nome]);
-        } */
+        }
         return $exhibitions;
     }
 
