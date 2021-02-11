@@ -27,7 +27,7 @@ class ExposicaoController extends Controller
      */
     public function activeExhibitions()
     {
-        $exhibitions = Exposicao::where("estado", false)->get();
+        $exhibitions = Exposicao::where("estado", true)->get();
         $i = 0;
         foreach ($exhibitions as $exhibition) {
             $institution = Instituicao::where("instituicaoID", $exhibition->instituicaoID)->first();
