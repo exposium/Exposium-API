@@ -44,8 +44,3 @@ Route::post('/login', [InstituicaoController::class, 'login'])->middleware('cors
 Route::get('/tokenError', function () {
     return json_encode(["message" => "Access Denied"])->middleware('cors');
 });
-
-
-//Route::middleware('auth:api')->get('/user', function (Request $request) {
-//    return $request->user();
-//});

@@ -71,7 +71,7 @@ class ExposicaoController extends Controller
         $exposicaoID = '';
         $tmp = true;
 
-        do{
+        do {
             for ($i = 0; $i < $idSize; $i++) {
                 $exposicaoID .= $characters[rand(0, $charactersLength - 1)];
             }
@@ -80,7 +80,7 @@ class ExposicaoController extends Controller
                 $tmp = false;
             }
 
-        }while($tmp);
+        } while($tmp);
 
         return $exposicaoID;
     }
@@ -93,12 +93,17 @@ class ExposicaoController extends Controller
      */
     public function show($id)
     {
+        $exhibition = Exposicao::where("exposicaoID", $id)->first();
+
+        // Get exhibition items
         $itens = Item::where("exposicaoID", $id)->get();
-        $exposicao = Exposicao::where("exposicaoID", $id)->first();
-
         $array = ['itens' => $itens];
+        
+        // Get institution
+        $institution = Instituicao::where("instituicaoID", $exhibition->instituicaoID)->first();
+        array_push($array, ['nomeInstituicao' => $institution->nome]);
 
-        return array_merge($exposicao->toArray(), $array);
+        return array_merge($exhibition->toArray(), $array);
     }
 
     public function getExhibitionsByInstitution($id) {
