@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use App\Models\TipoDeItem;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
@@ -57,7 +58,9 @@ class ItemController extends Controller
      */
     public function show($id)
     {
-        return Item::find($id);
+        $item = Item::find($id);
+        $itemTypeName = TipoDeItem::find($item->tipoItemID)->name;
+        return array_merge($item->toArray(), ['nomeTipoItem' => $itemTypeName]);
     }
 
     /**
