@@ -59,8 +59,8 @@ class ItemController extends Controller
     public function show($id)
     {
         $item = Item::find($id);
-        $itemTypeName = TipoDeItem::find($item->tipoItemID)->nome;
-        return array_merge($item->toArray(), ['nomeTipoItem' => $itemTypeName]);
+        $itemType = TipoDeItem::find($item->tipoItemID);
+        return array_merge($item->toArray(), ['nomeTipoItem' => $itemType]);
     }
 
     /**
