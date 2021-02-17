@@ -98,11 +98,12 @@ class ExposicaoController extends Controller
 
         // Get exhibition items
         $itens = Item::where("exposicaoID", $id)->get();
+        $exhibitionItens = [];
         foreach ($itens as $item) {
             $itemTypeName = TipoDeItem::find($item->tipoItemID)->nomeTipoItem;
-            array_merge($item->toArray(), ['nomeTipoItem' => $itemTypeName]);
+            array_push($exhibitionItens, array_merge($item->toArray(), ['nomeTipoItem' => $itemTypeName]));
         }
-        $itens = ['itens' => $itens];
+        $itens = ['itens' => $exhibitionItens];
 
         // Get institution
         $institution = Instituicao::where("instituicaoID", $exhibition->instituicaoID)->first();
