@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Exposicao;
 use App\Models\Instituicao;
 use App\Models\Item;
+use App\Models\TipoDeItem;
 use Illuminate\Http\Request;
 use function Symfony\Component\Translation\t;
 
@@ -97,6 +98,10 @@ class ExposicaoController extends Controller
 
         // Get exhibition items
         $itens = Item::where("exposicaoID", $id)->get();
+        foreach ($itens as $item) {
+            $itemTypeName = TipoDeItem::find($item->tipoItemID)->nomeTipoItem;
+            array_merge($item->toArray(), ['nomeTipoItem' => $itemTypeName]);
+        }
         $itens = ['itens' => $itens];
 
         // Get institution
